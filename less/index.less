@@ -246,11 +246,12 @@
 				top: -360px;
 				left: 0;
 				.category-list{
+					position: relative;
 					width: 210px;
 					height: 360px;
 					background: rgba(49,49,49,0.8);
-					li{
-						position: relative;
+					font-weight: 200;
+					li{	
 						height: 45px;
 						padding-left: 20px;
 						padding-right: 30px;
@@ -260,16 +261,28 @@
 							line-height: 45px;
 							font-size: 14px;
 							color: #ffffff;
+							font-weight: 200;
+							border-bottom: 1px solid rgba(255,255,255,.2);
 							&:after{
-								position: absolute;
-								right: 30px;
-								content: '>';
-								color: #839095;
-								line-height: 45px;
-								font-size: 14px;
+								position: relative;
+								display: inline-block;
+								float: right;
+								right: 0;
+								top: 17px;
+								content: '';
+								background: url(../images/show1.png) no-repeat center;
+								width: 8px;
+								height: 12px;
 							}
 						}
 						&:hover{
+							background: #ffffff;
+							a{
+								color: #333333;
+								&:after{
+									background: url(../images/show.png) no-repeat center;
+								}
+							}
 							.category-submeu{
 								opacity: 1;
 								display: block;
@@ -283,6 +296,7 @@
 						left: 210px;
 						top: 0;
 						width: 790px;
+						min-height: 360px;
 						padding: 0;
 						background: #ffffff;
 						z-index: 999;
@@ -292,7 +306,7 @@
 						.knowledge{
 							padding: 20px;
 							.title{
-								border-bottom: 2px solid #a0aeb9;
+								border-bottom: 1px solid #a0aeb9;
 								span{
 									display: inline-block;
 									width: 60px;
@@ -302,6 +316,7 @@
 									font-size: 12px;
 									line-height: 20px;
 									text-align: center;
+									font-weight: 200;
 								}
 							}
 							dl{
@@ -318,8 +333,9 @@
 								    	font-size: 13px;
 								    	line-height: 28px;
 								    	color: #333;
+								    	font-weight: 200;
 								    	&:after{
-								    		content: '';
+								    		display: none;
 								    	}
 								    	&:hover{
 									    	color: #35b556;
@@ -328,22 +344,23 @@
 								}
 								dd{
 									display: inline-block;
-									width: 650px;
 								    font-size: 0;
 								    a{
 								    	position: relative;
 								    	display: inline-block;
-								    	margin-right: 20px;
+								    	margin-right: 16px;
 								    	font-size: 12px;
 								    	line-height: 28px;
 								    	color: #666;
+								    	font-weight: 200;
 							    		&:after{
 							    			position: absolute;
-								    		top: 0;
-								    		right: -10px;
+								    		top: 50%;
+								    		transform: translateY(-50%);
+								    		right: -8px;
 								    		content: '';
 								    		width: 1px;
-								    		height: 28px;
+								    		height: 14px;
 								    		background: #f0f0f0;
 							    		}
 								    	&:hover{
@@ -357,7 +374,7 @@
 							padding-left: 20px;
 							padding-right: 20px;
 							.title{
-								border-bottom: 2px solid #35b556;
+								border-bottom: 1px solid #35b556;
 								span{
 									display: inline-block;
 									width: 60px;
@@ -367,6 +384,7 @@
 									font-size: 12px;
 									line-height: 20px;
 									text-align: center;
+									font-weight: 200;
 								}
 							}
 							ul{
@@ -380,8 +398,9 @@
 										line-height: 24px;
 										font-size: 12px;
 										color: #333333;
+										font-weight: 200;
 										&:after{
-											content: '';
+											display: none;
 										}
 										&:hover{
 								    		color: #35b556;
@@ -533,9 +552,10 @@
 				}	
 			}
 			.right-nav{
-				position: absolute;
-				top: 70px;
-				right: -60px;
+				position: fixed;
+				top: 620px;
+    			left: 50%;
+    			margin-left: 520px;
 				width: 40px;
 				list-style: none;		
 				li{
@@ -621,23 +641,25 @@
 				flex-wrap: wrap;
 				.path-item{
 					position: relative;
-					width: 190px;
+					width: 192px;
 					height: 150px;
+					padding-top: 15px;
+					padding-bottom: 10px;
 					margin-bottom: 10px;
 					background: #ffffff;
 					list-style: none;
+					text-align: center;
 					.path-image{
-						width: 190px;
-						height: 150px;
+						display: block;
+						width: 100%;
+						height: 100%;
+						margin-bottom: 10px;
 						img{
-							width: 100%;
-							height: 100%;
+							height: 96px;
+							margin-bottom: 10px;
 						}
 						h3{
-							position: absolute;
-							top: 120px;
 							height: 20px;
-							width: 100%;
 							text-align: center;
 							line-height: 20px;
 							font-size: 12px;
@@ -686,12 +708,13 @@
 						text-align: center;
 						img{
 							height: 40px;
-							margin-bottom: 20px;
+							margin-bottom: 10px;
 						}
 						h3{
 							font-size: 12px;
-							line-height: 22px;
+							line-height: 20px;
 							color: #555555;
+							margin-bottom: 10px;
 							span{
 								display: block;
 								color: #35b558;
@@ -760,6 +783,7 @@
 						font-size: 13px;
 						color: #333333;
 						margin-bottom: 20px;
+						text-align: center;
 					}
 					.item-btn{
 						text-align: center;
@@ -939,6 +963,20 @@
 								color: #999999;
 							}
 
+						}
+					}
+					&:nth-child(2){
+						.content{
+							.title{
+								background: #689dff;
+							}
+						}
+					}
+					&:nth-child(3){
+						.content{
+							.title{
+								background: #3ad29e;
+							}
 						}
 					}
 				}
