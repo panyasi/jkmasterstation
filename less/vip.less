@@ -38,6 +38,7 @@
 						margin-left: 6px;
 						transform: rotate(90deg) scaleY(1.8);
 						color: #b0b0b0;
+						transition: all 0.4s ease-in-out;
 					}
 				}
 				&:hover{
@@ -98,6 +99,8 @@
 				outline: none;
 				border: 1px solid #bebebe;
 				border-right: 0;
+				padding-left: 10px;
+				font-size: 12px;
 				&::-webkit-input-placeholder{
 					color: #bebebe;
 				}
@@ -239,7 +242,7 @@
 			.item{
 				position: relative;
 				width: 320px;
-				background: #ffffff;
+				background: #fafafa;
 				border-radius: 2px;
 				overflow: hidden;
 				.logo{
@@ -268,16 +271,12 @@
 						color: #a9ecbc;
 						text-align: center;
 					}
-				}
-				.vip-title-content{
-					background: linear-gradient(to right,#ac38d7,#7c24c0);
-				}
-				.svip-title-content{
-					background: linear-gradient(to right,#ff7200,#ff4800);
-				}
-				
+				}				
 				.text-content{
+					background: #ffffff;
 					padding-top: 40px;
+					padding-bottom: 36px;
+					border-bottom: 1px solid #f1f1f1;
 					.price{
 						position: relative;
 						line-height: 40px;
@@ -289,11 +288,10 @@
 						}
 						.monthly{
 							display: block;
-							line-height: 20px;
+							line-height: 28px;
 							font-size: 13px;
 							color: #999999;
 							text-align: center;
-							margin-bottom: 40px;
 						}
 						.yearly{
 							position: absolute;
@@ -304,21 +302,25 @@
 							color: #999999;
 						}
 					}
-					.web{
-						height: 20px;
-						margin-top: 40px;
-						line-height: 20px;
-						font-size: 13px;
-						text-align: center;
-						color: #ff6a00;
-					}
-					.change{
-						height: 20px;
-						line-height: 20px;
-						font-size: 13px;
-						color: #333333;
-						text-align: center;
-						margin-bottom: 40px;
+					.other-box{
+						height: 60px;
+						padding-top: 10px;
+						background: #fafafa;
+						.web{
+							height: 20px;
+							line-height: 20px;
+							font-size: 13px;
+							text-align: center;
+							color: #ff6a00;
+						}
+						.change{
+							height: 20px;
+							line-height: 20px;
+							font-size: 13px;
+							color: #333333;
+							text-align: center;
+							margin-bottom: 40px;
+						}
 					}
 					.value-btn{
 						display: block;
@@ -330,11 +332,16 @@
 						line-height: 32px;
 						text-align: center;
 						color: #35b558;
-						margin: 0 auto 46px auto;
+						margin: 36px auto 0 auto;
 					}
+				}
+				.list-content{
+					background: #fafafa;
 					.text-list{
+						padding-top: 10px;
 						padding-left: 20px;
-						margin-bottom: 30px;
+						padding-bottom: 12px;
+						border-bottom: 1px solid #f1f1f1;
 						h3{
 							line-height: 30px;
 							font-size: 13px;
@@ -351,6 +358,26 @@
 							line-height: 22px;
 							font-size: 12px;
 							color: #333333;
+						}
+						&:last-child{
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+			.vip-item{
+				.title-content{
+					background: linear-gradient(to right,#ac38d7,#7c24c0);
+				}
+			}
+			.svip-item{
+				.title-content{
+					background: linear-gradient(to right,#ff7200,#ff4800);
+				}
+				.text-content{
+					.price{
+						.monthly{
+							margin-bottom: 30px;
 						}
 					}
 				}

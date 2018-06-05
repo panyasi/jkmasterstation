@@ -37,6 +37,7 @@
 						font-size: 12px;
 						margin-left: 6px;
 						transform: rotate(90deg) scaleY(1.8);
+						transition: all 0.4s ease-in-out;
 						color: #b0b0b0;
 					}
 				}
@@ -98,6 +99,8 @@
 				outline: none;
 				border: 1px solid #bebebe;
 				border-right: 0;
+				padding-left: 10px;
+				font-size: 12px;
 				&::-webkit-input-placeholder{
 					color: #bebebe;
 				}
@@ -277,8 +280,10 @@
 						}
 						&:hover{
 							background: #ffffff;
+							border-top: 1px solid #e6e6e6;
 							a{
 								color: #333333;
+								border-bottom: 0;
 								&:after{
 									background: url(../images/show.png) no-repeat center;
 								}
@@ -299,6 +304,7 @@
 						min-height: 360px;
 						padding: 0;
 						background: #ffffff;
+						border-top: 1px solid #e6e6e6;
 						z-index: 999;
 						transition: all .2s ease;
                 		transform: translateY(100%);
@@ -537,6 +543,7 @@
 			.title-box{
 				display: flex;
 				justify-content: space-between;
+				align-items: flex-end;
 				margin-bottom: 20px;
 				h2{
 					height: 20px;
@@ -546,7 +553,7 @@
 				}
 				.more-btn{
 					display: block;
-					line-height: 20px;
+					line-height: 12px;
 					font-size: 12px;
 					color: #333333;
 				}	
@@ -677,6 +684,7 @@
 			.title-box{
 				display: flex;
 				justify-content: space-between;
+				align-items: flex-end;
 				margin-bottom: 20px;
 				h2{
 					height: 20px;
@@ -686,7 +694,7 @@
 				}
 				.more-btn{
 					display: block;
-					line-height: 20px;
+					line-height: 12px;
 					font-size: 12px;
 					color: #333333;
 				}
@@ -787,8 +795,10 @@
 					}
 					.item-btn{
 						text-align: center;
+						display: flex;
+						justify-content: center;
 						.more-btn{
-							display: inline-block;
+							display: block;
 							width: 82px;
 							height: 32px;
 							border: 1px solid #666666;
@@ -797,10 +807,11 @@
 							color: #666666;
 							font-size: 13px;
 							text-align: center;
-							margin-right: 16px
+							margin-right: 4px;
+							margin-left: 4px;
 						}
 						.apply-btn{
-							display: inline-block;
+							display: block;
 							width: 82px;
 							height: 32px;
 							border: 1px solid #35b556;
@@ -809,7 +820,8 @@
 							color: #35b556;
 							font-size: 13px;
 							text-align: center;
-							margin-right: 16px
+							margin-left: 4px;
+							margin-right: 4px;
 						}
 					}
 				}

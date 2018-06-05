@@ -310,6 +310,9 @@ template {
 a {
   text-decoration: none;
 }
+h1 {
+  font-weight: 400;
+}
 h2 {
   font-weight: 400;
 }
@@ -356,6 +359,7 @@ h3 {
   font-size: 12px;
   margin-left: 6px;
   transform: rotate(90deg) scaleY(1.8);
+  transition: all 0.4s ease-in-out;
   color: #b0b0b0;
 }
 .pg-hd .container .nav li:hover span {
@@ -413,6 +417,8 @@ h3 {
   outline: none;
   border: 1px solid #bebebe;
   border-right: 0;
+  padding-left: 10px;
+  font-size: 12px;
 }
 .pg-hd .container .form input::-webkit-input-placeholder {
   color: #bebebe;
@@ -589,9 +595,11 @@ h3 {
 }
 .pg-bd .banner-section .container .category-container .category-list li:hover {
   background: #ffffff;
+  border-top: 1px solid #e6e6e6;
 }
 .pg-bd .banner-section .container .category-container .category-list li:hover a {
   color: #333333;
+  border-bottom: 0;
 }
 .pg-bd .banner-section .container .category-container .category-list li:hover a:after {
   background: url(../images/show.png) no-repeat center;
@@ -610,6 +618,7 @@ h3 {
   min-height: 360px;
   padding: 0;
   background: #ffffff;
+  border-top: 1px solid #e6e6e6;
   z-index: 999;
   transition: all .2s ease;
   transform: translateY(100%);
@@ -840,6 +849,7 @@ h3 {
 .pg-bd .path-section .container .title-box {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 20px;
 }
 .pg-bd .path-section .container .title-box h2 {
@@ -850,7 +860,7 @@ h3 {
 }
 .pg-bd .path-section .container .title-box .more-btn {
   display: block;
-  line-height: 20px;
+  line-height: 12px;
   font-size: 12px;
   color: #333333;
 }
@@ -969,6 +979,7 @@ h3 {
 .pg-bd .system-section .container .title-box {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 20px;
 }
 .pg-bd .system-section .container .title-box h2 {
@@ -979,7 +990,7 @@ h3 {
 }
 .pg-bd .system-section .container .title-box .more-btn {
   display: block;
-  line-height: 20px;
+  line-height: 12px;
   font-size: 12px;
   color: #333333;
 }
@@ -1077,9 +1088,11 @@ h3 {
 }
 .pg-bd .service-section .container .service-list .service-item .item-btn {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .pg-bd .service-section .container .service-list .service-item .item-btn .more-btn {
-  display: inline-block;
+  display: block;
   width: 82px;
   height: 32px;
   border: 1px solid #666666;
@@ -1088,10 +1101,11 @@ h3 {
   color: #666666;
   font-size: 13px;
   text-align: center;
-  margin-right: 16px;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 .pg-bd .service-section .container .service-list .service-item .item-btn .apply-btn {
-  display: inline-block;
+  display: block;
   width: 82px;
   height: 32px;
   border: 1px solid #35b556;
@@ -1100,7 +1114,8 @@ h3 {
   color: #35b556;
   font-size: 13px;
   text-align: center;
-  margin-right: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 .pg-bd .community-section {
   background: #f4f4f4;

@@ -301,7 +301,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PingFangSC-Regular', 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+  font-family: PingFangSC-Light, 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
 }
 .container {
   width: 1000px;
@@ -310,8 +310,15 @@ template {
 a {
   text-decoration: none;
 }
+h1 {
+  font-weight: 400;
+  margin: 0;
+}
 h2 {
-  font-weight: 600;
+  font-weight: 400;
+}
+h3 {
+  font-weight: 400;
 }
 .pg-hd .container {
   display: flex;
@@ -354,6 +361,7 @@ h2 {
   margin-left: 6px;
   transform: rotate(90deg) scaleY(1.8);
   color: #b0b0b0;
+  transition: all 0.4s ease-in-out;
 }
 .pg-hd .container .nav li:hover span {
   transform: rotate(270deg) scaleY(1.8);
@@ -410,6 +418,8 @@ h2 {
   outline: none;
   border: 1px solid #bebebe;
   border-right: 0;
+  padding-left: 10px;
+  font-size: 12px;
 }
 .pg-hd .container .form input::-webkit-input-placeholder {
   color: #bebebe;
@@ -549,7 +559,7 @@ h2 {
 .pg-bd .value-section .value-list .item {
   position: relative;
   width: 320px;
-  background: #ffffff;
+  background: #fafafa;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -580,14 +590,11 @@ h2 {
   color: #a9ecbc;
   text-align: center;
 }
-.pg-bd .value-section .value-list .item .vip-title-content {
-  background: linear-gradient(to right, #ac38d7, #7c24c0);
-}
-.pg-bd .value-section .value-list .item .svip-title-content {
-  background: linear-gradient(to right, #ff7200, #ff4800);
-}
 .pg-bd .value-section .value-list .item .text-content {
+  background: #ffffff;
   padding-top: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #f1f1f1;
 }
 .pg-bd .value-section .value-list .item .text-content .price {
   position: relative;
@@ -601,11 +608,10 @@ h2 {
 }
 .pg-bd .value-section .value-list .item .text-content .price .monthly {
   display: block;
-  line-height: 20px;
+  line-height: 28px;
   font-size: 13px;
   color: #999999;
   text-align: center;
-  margin-bottom: 40px;
 }
 .pg-bd .value-section .value-list .item .text-content .price .yearly {
   position: absolute;
@@ -615,15 +621,19 @@ h2 {
   font-size: 13px;
   color: #999999;
 }
-.pg-bd .value-section .value-list .item .text-content .web {
+.pg-bd .value-section .value-list .item .text-content .other-box {
+  height: 60px;
+  padding-top: 10px;
+  background: #fafafa;
+}
+.pg-bd .value-section .value-list .item .text-content .other-box .web {
   height: 20px;
-  margin-top: 40px;
   line-height: 20px;
   font-size: 13px;
   text-align: center;
   color: #ff6a00;
 }
-.pg-bd .value-section .value-list .item .text-content .change {
+.pg-bd .value-section .value-list .item .text-content .other-box .change {
   height: 20px;
   line-height: 20px;
   font-size: 13px;
@@ -641,28 +651,45 @@ h2 {
   line-height: 32px;
   text-align: center;
   color: #35b558;
-  margin: 0 auto 46px auto;
+  margin: 36px auto 0 auto;
 }
-.pg-bd .value-section .value-list .item .text-content .text-list {
+.pg-bd .value-section .value-list .item .list-content {
+  background: #fafafa;
+}
+.pg-bd .value-section .value-list .item .list-content .text-list {
+  padding-top: 10px;
   padding-left: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f1f1;
 }
-.pg-bd .value-section .value-list .item .text-content .text-list h3 {
+.pg-bd .value-section .value-list .item .list-content .text-list h3 {
   line-height: 30px;
   font-size: 13px;
   color: #333333;
   margin-bottom: 20px;
 }
-.pg-bd .value-section .value-list .item .text-content .text-list dt {
+.pg-bd .value-section .value-list .item .list-content .text-list dt {
   line-height: 30px;
   font-size: 13px;
   color: #666666;
   margin-bottom: 8px;
 }
-.pg-bd .value-section .value-list .item .text-content .text-list dd {
+.pg-bd .value-section .value-list .item .list-content .text-list dd {
   line-height: 22px;
   font-size: 12px;
   color: #333333;
+}
+.pg-bd .value-section .value-list .item .list-content .text-list:last-child {
+  border-bottom: 0;
+}
+.pg-bd .value-section .value-list .vip-item .title-content {
+  background: linear-gradient(to right, #ac38d7, #7c24c0);
+}
+.pg-bd .value-section .value-list .svip-item .title-content {
+  background: linear-gradient(to right, #ff7200, #ff4800);
+}
+.pg-bd .value-section .value-list .svip-item .text-content .price .monthly {
+  margin-bottom: 30px;
 }
 .pg-bd .value-section .contact {
   margin-top: 40px;

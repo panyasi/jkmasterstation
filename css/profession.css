@@ -301,7 +301,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PingFangSC-Regular', 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+  font-family: PingFangSC-Light, 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
 }
 .container {
   width: 1000px;
@@ -310,8 +310,15 @@ template {
 a {
   text-decoration: none;
 }
+h1 {
+  font-weight: 400;
+  margin: 0;
+}
 h2 {
-  font-weight: 600;
+  font-weight: 400;
+}
+h3 {
+  font-weight: 400;
 }
 .pg-hd .container {
   display: flex;
@@ -354,6 +361,7 @@ h2 {
   margin-left: 6px;
   transform: rotate(90deg) scaleY(1.8);
   color: #b0b0b0;
+  transition: all 0.4s ease-in-out;
 }
 .pg-hd .container .nav li:hover span {
   transform: rotate(270deg) scaleY(1.8);
@@ -410,6 +418,8 @@ h2 {
   outline: none;
   border: 1px solid #bebebe;
   border-right: 0;
+  padding-left: 10px;
+  font-size: 12px;
 }
 .pg-hd .container .form input::-webkit-input-placeholder {
   color: #bebebe;
@@ -572,9 +582,10 @@ h4 {
   margin-bottom: 30px;
 }
 .pg-bd .profession-section .container .profession-container .list-design .card .card-item {
+  position: relative;
   width: 120px;
   height: 30px;
-  border: 1px solid #03b1a4;
+  border: 1px dashed #03b1a4;
   border-radius: 30px;
   text-align: center;
   margin-bottom: 10px;
@@ -585,6 +596,9 @@ h4 {
   line-height: 30px;
   font-size: 12px;
   color: #333333;
+}
+.pg-bd .profession-section .container .profession-container .list-design .card .card-item:hover .desc {
+  display: block;
 }
 .pg-bd .profession-section .container .profession-container .list-tech {
   width: 640px;
@@ -614,6 +628,7 @@ h4 {
   color: #666666;
 }
 .pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .card-item {
+  position: relative;
   width: 140px;
   height: 30px;
   border: 1px solid #03b1a4;
@@ -627,6 +642,27 @@ h4 {
   line-height: 30px;
   font-size: 12px;
   color: #333333;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .card-item:hover {
+  background: #03b1a4;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .card-item:hover a {
+  color: #fff;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .card-item:hover .desc {
+  display: block;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .wait {
+  border: 1px dashed #03b1a4;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .wait:hover {
+  background: none;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .wait:hover a {
+  color: #333333;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-1 .card .wait:hover .desc {
+  display: block;
 }
 .pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-2 {
   margin-bottom: 10px;
@@ -645,6 +681,7 @@ h4 {
   list-style: none;
 }
 .pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-2 .card .card-item {
+  position: relative;
   width: 140px;
   height: 30px;
   border: 1px solid #03b1a4;
@@ -658,6 +695,16 @@ h4 {
   line-height: 30px;
   font-size: 12px;
   color: #333333;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-2 .card .card-item:hover .desc {
+  display: block;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-2 .card:after {
+  content: '';
+  width: 138px;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-1 .card-line-2 .card .wait {
+  border: 1px dashed #03b1a4;
 }
 .pg-bd .profession-section .container .profession-container .list-tech .list-tech-container .list-tech-2 {
   width: 40px;
@@ -706,6 +753,7 @@ h4 {
   color: #666666;
 }
 .pg-bd .profession-section .container .profession-container .list-tech .list-tech-4 .card .card-item {
+  position: relative;
   width: 140px;
   height: 30px;
   border: 1px solid #03b1a4;
@@ -721,6 +769,12 @@ h4 {
   font-size: 12px;
   color: #333333;
 }
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-4 .card .card-item:hover .desc {
+  display: block;
+}
+.pg-bd .profession-section .container .profession-container .list-tech .list-tech-4 .card .wait {
+  border: 1px dashed #03b1a4;
+}
 .pg-bd .profession-section .container .profession-container .list-market {
   width: 180px;
   padding-left: 30px;
@@ -732,9 +786,10 @@ h4 {
   margin-bottom: 30px;
 }
 .pg-bd .profession-section .container .profession-container .list-market .card .card-item {
+  position: relative;
   width: 120px;
   height: 30px;
-  border: 1px solid #03b1a4;
+  border: 1px dashed #03b1a4;
   border-radius: 30px;
   text-align: center;
   margin-bottom: 10px;
@@ -745,6 +800,9 @@ h4 {
   line-height: 30px;
   font-size: 12px;
   color: #333333;
+}
+.pg-bd .profession-section .container .profession-container .list-market .card .card-item:hover .desc {
+  display: block;
 }
 .pg-bd .profession-section .container .pm {
   padding: 20px 30px;
@@ -760,6 +818,63 @@ h4 {
   text-align: center;
   color: #333333;
   line-height: 40px;
+}
+.pg-bd .profession-section .container .desc {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  display: none;
+  margin-left: -140px;
+  width: 280px;
+  padding: 10px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #333;
+  text-align: justify;
+  background: #fff;
+  z-index: 2;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.pg-bd .profession-section .container .desc .tips {
+  position: relative;
+  text-align: center;
+  height: 20px;
+  color: #666;
+  margin-bottom: 4px;
+}
+.pg-bd .profession-section .container .desc .tips span {
+  display: inline-block;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 140px;
+  margin-left: -70px;
+}
+.pg-bd .profession-section .container .desc .tips:before {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  content: '';
+}
+.pg-bd .profession-section .container .desc:before {
+  display: inline-block;
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  margin-left: -7px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid #fff;
 }
 .pg-bd .wanna-section {
   background: #f4f4f4;

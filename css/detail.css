@@ -301,7 +301,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PingFangSC-Regular', 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+  font-family: PingFangSC-Light, 'STHeiti Light', 'helvetica neue', 'hiragino sans gb', arial, 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
 }
 .container {
   width: 1000px;
@@ -310,8 +310,15 @@ template {
 a {
   text-decoration: none;
 }
+h1 {
+  font-weight: 400;
+  margin: 0;
+}
 h2 {
-  font-weight: 600;
+  font-weight: 400;
+}
+h3 {
+  font-weight: 400;
 }
 .pg-hd .container {
   display: flex;
@@ -354,6 +361,7 @@ h2 {
   margin-left: 6px;
   transform: rotate(90deg) scaleY(1.8);
   color: #b0b0b0;
+  transition: all 0.4s ease-in-out;
 }
 .pg-hd .container .nav li:hover span {
   transform: rotate(270deg) scaleY(1.8);
@@ -410,6 +418,8 @@ h2 {
   outline: none;
   border: 1px solid #bebebe;
   border-right: 0;
+  padding-left: 10px;
+  font-size: 12px;
 }
 .pg-hd .container .form input::-webkit-input-placeholder {
   color: #bebebe;
@@ -458,15 +468,13 @@ h2 {
 .pg-bd .banner-section .container .banner-nav {
   display: flex;
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .pg-bd .banner-section .container .banner-nav li {
   position: relative;
   line-height: 20px;
   margin-right: 20px;
   color: #bbbbbb;
-}
-.pg-bd .banner-section .container .banner-nav li a {
   font-size: 12px;
 }
 .pg-bd .banner-section .container .banner-nav li:not( :nth-last-child(1)) {
@@ -483,7 +491,7 @@ h2 {
 }
 .pg-bd .banner-section .container .fixed-nav {
   position: fixed;
-  top: 120px;
+  top: 110px;
   width: 200px;
   list-style: none;
 }
@@ -512,9 +520,9 @@ h2 {
   padding-left: 230px;
 }
 .pg-bd .banner-section .container .content-box .title {
-  height: 24px;
+  height: 30px;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -884,6 +892,7 @@ h2 {
 .pg-bd .path-section .container .path-level .path-course ul li .path-lesson-list .up-coming:before {
   color: #f16c78;
   content: '*';
+  transform: none;
 }
 .pg-bd .path-section .container .path-level .path-course ul li .path-lesson-list .list-content {
   display: none;
