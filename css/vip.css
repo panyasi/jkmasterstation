@@ -355,16 +355,18 @@ h3 {
 .pg-hd .container .nav li a:hover {
   color: #35b558;
 }
-.pg-hd .container .nav li a span {
+.pg-hd .container .nav li a .show-icon {
+  background: url(../images/show.png) no-repeat center;
   display: inline-block;
-  font-size: 12px;
-  margin-left: 6px;
-  transform: rotate(90deg) scaleY(1.8);
-  color: #b0b0b0;
+  vertical-align: middle;
+  width: 8px;
+  margin-left: 5px;
+  height: 12px;
+  transform: rotate(90deg);
   transition: all 0.4s ease-in-out;
 }
-.pg-hd .container .nav li:hover span {
-  transform: rotate(270deg) scaleY(1.8);
+.pg-hd .container .nav li:hover .show-icon {
+  transform: rotate(270deg);
 }
 .pg-hd .container .nav li:hover .slide-submeu {
   display: block;
@@ -653,20 +655,26 @@ h3 {
   color: #35b558;
   margin: 36px auto 0 auto;
 }
+.pg-bd .value-section .value-list .item .text-content .value-btn:hover {
+  background: #35b558;
+  color: #ffffff;
+}
 .pg-bd .value-section .value-list .item .list-content {
   background: #fafafa;
+}
+.pg-bd .value-section .value-list .item .list-content h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+  color: #333333;
+  padding-left: 20px;
+  border-bottom: 1px solid #f1f1f1;
 }
 .pg-bd .value-section .value-list .item .list-content .text-list {
   padding-top: 10px;
   padding-left: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid #f1f1f1;
-}
-.pg-bd .value-section .value-list .item .list-content .text-list h3 {
-  line-height: 30px;
-  font-size: 13px;
-  color: #333333;
-  margin-bottom: 20px;
 }
 .pg-bd .value-section .value-list .item .list-content .text-list dt {
   line-height: 30px;
@@ -700,6 +708,9 @@ h3 {
 }
 .pg-bd .value-section .contact a {
   color: #35b558;
+}
+.pg-bd .value-section .contact a:hover {
+  color: #0072c6;
 }
 .pg-bd .authority-section {
   background: linear-gradient(to right, #9b2bdd, #ef7879);

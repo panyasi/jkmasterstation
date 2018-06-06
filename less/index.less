@@ -32,18 +32,20 @@
 					&:hover{
 						color: #35b558;
 					}
-					span{
+					.show-icon{
+						background: url(../images/show.png) no-repeat center;
 						display: inline-block;
-						font-size: 12px;
-						margin-left: 6px;
-						transform: rotate(90deg) scaleY(1.8);
+						vertical-align: middle;
+					    width: 8px;
+					    margin-left: 5px;
+					    height: 12px;
+					    transform: rotate(90deg);
 						transition: all 0.4s ease-in-out;
-						color: #b0b0b0;
 					}
 				}
 				&:hover{
-					span{
-						transform: rotate(270deg) scaleY(1.8);
+					.show-icon{
+						transform: rotate(270deg);
 					}
 					.slide-submeu{
 						display: block;
@@ -139,6 +141,93 @@
 	}
 }
 .pg-bd{
+	position: relative;
+	.right-nav{
+		position: fixed;
+		top: 620px;
+		left: 50%;
+		margin-left: 520px;
+		width: 40px;
+		list-style: none;		
+		li{
+			position: relative;
+			height: 41px;
+			margin-bottom: 1px;
+			background: #ffffff;
+			a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				img{
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 30px;
+					height: 20px;
+				}
+			}
+		}
+		.weixin-contact{
+			&:hover{
+				.weixin-submeu{
+					opacity: 1;
+					display: block;
+					z-index: 999;
+				}
+			}
+		}
+		.phone-contact{
+			&:hover{
+				.phone-submeu{
+					opacity: 1;
+					display: block;
+					z-index: 999;
+				}
+			}
+		}
+		.weixin-submeu{
+			position: absolute;
+			top: 0;
+			left: -150px;
+			width: 150px;
+			background: #ffffff;
+			padding: 10px 20px 20px;
+			transition: all .2s ease;
+        	opacity: 0;
+        	display: none;
+			.title{
+				line-height: 20px;
+				font-size: 12px;
+				color: #999999;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			.code{
+				width: 114px;
+				height: 114px;
+				margin: auto;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.phone-submeu{
+			position: absolute;
+			left: -154px;
+			top: -4px;
+			width: 157px;
+			height: 89px;
+			// transition: all .2s ease;
+        	opacity: 0;
+        	display: none;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 	.banner-section{
 		.swiper-wrapper{
 			position: relative;
@@ -446,17 +535,14 @@
 				top: -330px;
 				width: 210px;
 				background: #ffffff;
-				padding-top: 10px;
 				h3{
-					height: 20px;
+					height: 32px;
 					font-size: 13px;
-					line-height: 20px;
+					line-height: 32px;
 					color: #517896;
 					text-align: center;
-					margin-bottom: 10px;
 				}
 				.subscription-list{
-					height: 220px;
 					list-style: none;
 					background: #fafafa;
 					padding-left: 10px;
@@ -467,7 +553,8 @@
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
-						margin-bottom: 10px;
+						height: 44px;
+						border-bottom: 1px solid #f4f4f4;
 						img{
 							width: 20px;
 							height: 20px;
@@ -481,6 +568,9 @@
 								font-size: 12px;
 								color: #333333;
 								text-align: justify;
+								&:hover{
+									color: #35b558;
+								}
 							}
 						}
 					}
@@ -537,7 +627,7 @@
 	}
 	.path-section{
 		background: #f4f4f4;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		.container{
 			position: relative;
 			.title-box{
@@ -556,91 +646,10 @@
 					line-height: 12px;
 					font-size: 12px;
 					color: #333333;
+					&:hover{
+						color: #35b558;
+					}
 				}	
-			}
-			.right-nav{
-				position: fixed;
-				top: 620px;
-    			left: 50%;
-    			margin-left: 520px;
-				width: 40px;
-				list-style: none;		
-				li{
-					position: relative;
-					height: 41px;
-					margin-bottom: 1px;
-					background: #ffffff;
-					a{
-						display: inline-block;
-						width: 100%;
-						height: 100%;
-						text-align: center;
-						img{
-							position: relative;
-							top: 50%;
-							transform: translateY(-50%);
-							width: 30px;
-							height: 20px;
-						}
-					}
-				}
-				.weixin-contact{
-					&:hover{
-						.weixin-submeu{
-							opacity: 1;
-							display: block;
-							z-index: 999;
-						}
-					}
-				}
-				.phone-contact{
-					&:hover{
-						.phone-submeu{
-							opacity: 1;
-							display: block;
-							z-index: 999;
-						}
-					}
-				}
-				.weixin-submeu{
-					position: absolute;
-					top: 0;
-					left: -150px;
-					width: 150px;
-					background: #ffffff;
-					padding: 10px 20px 20px;
-					transition: all .2s ease;
-                	opacity: 0;
-					.title{
-						line-height: 20px;
-						font-size: 12px;
-						color: #999999;
-						text-align: center;
-						margin-bottom: 10px;
-					}
-					.code{
-						width: 114px;
-						height: 114px;
-						margin: auto;
-						img{
-							width: 100%;
-							height: 100%;
-						}
-					}
-				}
-				.phone-submeu{
-					position: absolute;
-					left: -154px;
-					top: -4px;
-					width: 157px;
-					height: 89px;
-					// transition: all .2s ease;
-                	opacity: 0;
-					img{
-						width: 100%;
-						height: 100%;
-					}
-				}
 			}
 			.path-list{
 				display: flex;
@@ -652,7 +661,6 @@
 					height: 150px;
 					padding-top: 15px;
 					padding-bottom: 10px;
-					margin-bottom: 10px;
 					background: #ffffff;
 					list-style: none;
 					text-align: center;
@@ -673,13 +681,19 @@
 							color: #333333;
 						}
 					}
+					&:nth-child(n+6){
+						margin-top: 10px;
+					}
+					&:hover{
+						box-shadow: 0 3px 6px rgba(0,0,0,.2);
+					}
 				}
 			}
 		}
 	}
 	.system-section{
 		background: #f4f4f4;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		.container{
 			.title-box{
 				display: flex;
@@ -697,6 +711,9 @@
 					line-height: 12px;
 					font-size: 12px;
 					color: #333333;
+					&:hover{
+						color: #35b558;
+					}
 				}
 			}	
 			.system-list{
@@ -709,7 +726,6 @@
 					background: #ffffff;
 					padding-top: 20px;
 					list-style: none;
-					margin-bottom: 10px;
 					.item-image{
 						display: block;
 						height: 100%;
@@ -729,13 +745,19 @@
 							}
 						}
 					}
+					&:nth-child(n+8){
+						margin-top: 10px;
+					}
+					&:hover{
+						box-shadow: 0 3px 6px rgba(0,0,0,.2);
+					}
 				}
 			}
 		}
 	}
 	.service-section{
 		background: #f4f4f4;
-		padding-bottom: 10px;
+		padding-bottom: 20px;
 		.container{
 			h2{
 				height: 20px;
@@ -753,7 +775,6 @@
 					height: 210px;
 					background: #ffffff;
 					padding-top: 10px;
-					margin-bottom: 10px;
 					.item-tag{
 						width: 50px;
 						height: 20px;
@@ -763,6 +784,9 @@
 						font-size: 12px;
 						margin-left: 14px;
 						color: #bbbbbb;
+					}
+					&:nth-child(n+4){
+						margin-top: 10px;
 					}
 					&:nth-child(5){
 						.item-tag{
@@ -801,7 +825,7 @@
 							display: block;
 							width: 82px;
 							height: 32px;
-							border: 1px solid #666666;
+							border: 1px solid #e4e4e4;
 							border-radius: 2px;
 							line-height: 32px;
 							color: #666666;
@@ -809,6 +833,10 @@
 							text-align: center;
 							margin-right: 4px;
 							margin-left: 4px;
+							&:hover{
+								background: #e4e4e4;
+								color: #333333;
+							}
 						}
 						.apply-btn{
 							display: block;
@@ -822,6 +850,17 @@
 							text-align: center;
 							margin-left: 4px;
 							margin-right: 4px;
+							&:hover{
+								background: #35b556;
+								color: #ffffff;
+							}
+						}
+						.upcoming-btn{
+							color: #c4c4c4;
+							&:hover{
+								background: none;
+								color: #c4c4c4;
+							}
 						}
 					}
 				}
@@ -854,6 +893,9 @@
 						line-height: 20px;
 						font-size: 12px;
 						color: #333333;
+						&:hover{
+							color: #35b558;
+						}
 					}
 				}
 				.content-list{
@@ -882,6 +924,14 @@
 									position: absolute;
 									right: 0;
 									color: #999999;
+								}
+							}
+						}
+						&:hover{
+							a{
+								color: #35b558;
+								span{
+									color: #35b558;
 								}
 							}
 						}
@@ -997,7 +1047,7 @@
 	}
 	.company-section{
 		background: #f4f4f4;
-		padding-bottom: 60px;
+		padding-bottom: 70px;
 		.container{
 			h2{
 				height: 20px;
@@ -1013,10 +1063,12 @@
 				.company-item{
 					width: 136px;
 					height: 45px;
-					margin-bottom: 10px;
 					img{
 						width: 100%;
 						height: 100%;
+					}
+					&:nth-child(n+8){
+						margin-top: 10px;
 					}
 				}
 			}
